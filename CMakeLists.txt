@@ -148,7 +148,7 @@ add_library(vcpkglib STATIC
     ${VCPKGLIB_BASE_INCLUDES}
     ${VCPKGLIB_INCLUDES}
 )
-target_include_directories(vcpkglib PUBLIC include)
+target_include_directories(vcpkglib PUBLIC $<BUILD_INTERFACE:include>)
 
 vcpkg_target_add_warning_options(vcpkglib)
 target_compile_definitions(vcpkglib PUBLIC
